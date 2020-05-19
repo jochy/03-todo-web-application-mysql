@@ -40,10 +40,7 @@ spec:
               key: RDS_USERNAME
               name: todo-web-application-config
         image: atingupta2005/todo-web-application-mysql:latest
-<<<<<<< HEAD
-=======
         #image: atingupta2005/todo-web-application-mysql:0.0.1-SNAPSHOT
->>>>>>> branch 'master' of https://github.com/atingupta2005/03-todo-web-application-mysql
         name: todo-web-application
         ports:
         - containerPort: 8080
