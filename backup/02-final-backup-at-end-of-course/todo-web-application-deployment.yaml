@@ -39,7 +39,7 @@ spec:
             configMapKeyRef:
               key: RDS_USERNAME
               name: todo-web-application-config
-        image: atingupta2005/todo-web-application-mysql:0.0.1-SNAPSHOT
+        image: atingupta2005/todo-web-application-mysql:latest
         name: todo-web-application
         ports:
         - containerPort: 8080
