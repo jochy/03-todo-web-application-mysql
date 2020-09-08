@@ -7,7 +7,8 @@ version: '3.7'
 # {"auths":{},"credsStore":"","stackOrchestrator":"swarm"}
 services:
   todo-web-application:
-    image: atingupta2005/todo-web-application-mysql:0.0.1-SNAPSHOT
+    image: atingupta2005/todo-web-application-mysql:latest
+    #image: atingupta2005/todo-web-application-mysql:0.0.1-SNAPSHOT
     #build:
       #context: .
       #dockerfile: Dockerfile
