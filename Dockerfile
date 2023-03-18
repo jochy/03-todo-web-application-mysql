@@ -6,5 +6,5 @@ RUN mvn clean install
 
 FROM openjdk:11-jre
 WORKDIR /
-COPY --from=BUILDER /app/target/*.jar .
-CMD ["java", "-jar", "todo-web-application-mysql.jar"]
+COPY --from=BUILDER /app/target/*.war .
+CMD ["java", "-jar", "todo-web-application-mysql.war"]
