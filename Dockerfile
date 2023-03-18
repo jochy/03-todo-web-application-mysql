@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 RUN mvn clean install
 
-FROM tomcat:8.0.51-jre8-alpine
-WORKDIR /usr/local/tomcat/webapps
-COPY --from=BUILDER /app/target/*.war .
-CMD ["catalina.sh", "run"]
+FROM openjdk:11-jre
+WORKDIR /
+COPY --from=BUILDER /app/target/*.jar .
+CMD ["java", "-jar", "todo-web-application-mysql.jar"]

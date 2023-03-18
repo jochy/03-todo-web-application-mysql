@@ -7,7 +7,7 @@
 	<groupId>com.in28minutes.springboot.web</groupId>
 	<artifactId>03-todo-web-application-mysql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>todo-web-application-mysql</name>
 
 	<description>Demo project for Spring Boot</description>
@@ -113,29 +113,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- Dockerfile Maven -->
-			<!-- https://github.com/spotify/dockerfile-maven -->
-<!--  			<plugin> -->
-<!-- 				<groupId>com.spotify</groupId> -->
-<!-- 				<artifactId>dockerfile-maven-plugin</artifactId> -->
-<!-- 				<version>1.4.6</version> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>default</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>build</goal> -->
-<!-- 							 <goal>push</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 				<configuration> -->
-<!-- 					todo -->
-<!-- 					<repository>atingupta2005/${project.name}</repository> -->
-<!-- 					<tag>${project.version}</tag> -->
-<!-- 					<skipDockerInfo>true</skipDockerInfo> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
-
 		</plugins>
 	</build>
 
