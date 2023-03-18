@@ -1,4 +1,10 @@
-From tomcat:8.0.51-jre8-alpine
-RUN rm -rf /usr/local/tomcat/webapps/*
-COPY ./target/*.war /usr/local/tomcat/webapps/ROOT.war
-CMD ["catalina.sh","run"]
+FROM maven:3.9 as BUILDER
+
+WORKDIR /app
+COPY . .
+RUN mvn clean install
+
+FROM tomcat:8.0.51-jre8-alpine
+WORKDIR /usr/local/tomcat/webapps
+COPY --from=BUILDER /app/target/*.war .
+CMD ["catalina.sh", "run"]
