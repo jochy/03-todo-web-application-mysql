@@ -8,11 +8,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
-	//Create User - in28Minutes/dummy
+
 	@Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
             throws Exception {
-        auth.inMemoryAuthentication().withUser("atingupta2005").password("{noop}dummy")
+        auth.inMemoryAuthentication().withUser("root").password("{noop}root")
                 .roles("USER", "ADMIN");
     }
 	
